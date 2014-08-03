@@ -1,0 +1,129 @@
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+
+<style>
+.wrap {width:960px; display:inline; float:left; margin-top:300px;}
+.left-col {float:left; width: 650px; display:inline;}
+.right-col {vertical-align:top; float:left; width: 300px; display:inline;}
+.text {font-family:Arial; color:#777; margin-left:150px;margin-top:-20px; width:220px; display:none;}
+
+.lev1, .lev2, .lev3, .lev4 {margin-left:65px; -webkit-transition: all 0.3s ease;                  
+    -moz-transition: all .3s ease-in-out;                 
+    -o-transition: all .3s ease-in-out;   
+    -ms-transition: all .3s ease-in-out;          
+    transition: all .3s ease-in-out;}
+
+.left-col .lev4 {position:absolute; z-index:4; margin-top:-150px;}
+.left-col .lev3 {position:absolute; z-index:3; margin-top:-100px;}
+.left-col .lev2 {position:absolute; z-index:2; margin-top:-50px;}
+.left-col .lev1 {position:absolute; z-index:1; margin-top:0px;}
+
+
+
+ul.menu {margin-top:-200px;list-style:none;}
+</style>
+
+
+<script type="text/javascript">
+var levels = ['lev2','lev3','lev4'];
+var levelMargins = ["-50", "-100", "-150"];
+
+$( ".menu a" ).click(function() {
+  $('.text').slideUp();
+  var level = $(this).attr('class');
+  $(this).next().slideDown( 200, function() {
+    // Animation complete.
+  });
+	if (level == 'lev4'){
+		var curMargin = $('div.lev4').css('marginTop').replace('px', '');
+		var newMargin = parseFloat(curMargin) - 100;
+		$('div.lev4').css('margin-top', '-150px');
+		$('div.lev3').css('margin-top', '-100px');
+		$('div.lev2').css('margin-top', '-50px');
+		$('div.lev1').css('margin-top', '0px');
+	}
+  
+    if (level == 'lev3'){
+		var curMargin = $('div.lev1').css('marginTop').replace('px', '');
+		var newMargin = parseFloat(curMargin) - 100;
+		$('div.lev4').css('margin-top', '-300px');
+		$('div.lev3').css('margin-top', '-100px');
+		$('div.lev2').css('margin-top', '-50px');
+		$('div.lev1').css('margin-top', '0px');
+    }
+    
+    if (level == 'lev2'){
+		var curMargin = $('div.lev2').css('marginTop').replace('px', '');
+		var newMargin = parseFloat(curMargin) - 100;
+		$('div.lev4').css('margin-top', '-300px');
+		$('div.lev3').css('margin-top', '-250px');
+		$('div.lev2').css('margin-top', '-50px');
+		$('div.lev1').css('margin-top', '0px');
+    }
+  
+    if (level == 'lev1'){
+		var curMargin = $('div.lev3').css('marginTop').replace('px', '');
+		var newMargin = parseFloat(curMargin) - 100;
+		$('div.lev4').css('margin-top', '-300px');
+		$('div.lev3').css('margin-top', '-250px');
+		$('div.lev2').css('margin-top', '-200px');
+		$('div.lev1').css('margin-top', '0px');
+    }
+    if (level == 'lev0'){
+		var curMargin = $('div.lev3').css('marginTop').replace('px', '');
+		var newMargin = parseFloat(curMargin) - 100;
+		$('div.lev4').css('margin-top', '-300px');
+		$('div.lev3').css('margin-top', '-250px');
+		$('div.lev2').css('margin-top', '-200px');
+		$('div.lev1').css('margin-top', '-150px');
+    }
+});
+</script>
+
+
+<div class="wrap">
+  
+<div class="left-col">
+   <div class="lev4">
+    <img src="http://vmax.lv/phone/lev4.png"/>
+  </div>
+   <div class="lev3">
+    <img src="http://vmax.lv/phone/lev3.png"/>
+  </div>
+   <div class="lev2">
+    <img src="http://vmax.lv/phone/lev2.png"/>
+  </div>
+  <div class="lev1">
+    <img src="http://vmax.lv/phone/lev1.png"/>
+  </div>
+  <div class="phone">
+    <img src="http://vmax.lv/phone/phone.png"/>
+  </div>
+</div>
+  
+<div class="right-col">
+<ul class="menu">
+  <li>
+    <a href="#" class="lev4"><img src="http://vmax.lv/phone/iyem1.png"/></a>
+    <p class="text">Lorem ipsum dolor sit atmet ipsum dolor sit atmet ipsum dolor sit atmet ipsum dolor sit atmet ipsum dolor sit atmet</p>
+  </li>
+  <li>
+    <a href="#" class="lev3"><img src="http://vmax.lv/phone/iyem2.png"/></a>
+     <p class="text">Lorem ipsum dolor sit atmet ipsum dolor sit atmet ipsum dolor sit atmet ipsum dolor sit atmet ipsum dolor sit atmet</p>
+  </li>
+  <li>
+    <a href="#" class="lev2"><img src="http://vmax.lv/phone/iyem1.png"/></a>
+     <p class="text">Lorem ipsum dolor sit atmet ipsum dolor sit atmet ipsum dolor sit atmet ipsum dolor sit atmet ipsum dolor sit atmet</p>
+  </li>
+  <li>
+    <a href="#" class="lev1"><img src="http://vmax.lv/phone/iyem2.png"/></a>
+     <p class="text">Lorem ipsum dolor sit atmet ipsum dolor sit atmet ipsum dolor sit atmet ipsum dolor sit atmet ipsum dolor sit atmet</p>
+  </li>
+   <li>
+    <a href="#" class="lev0" style="margin-left:65px;"><img src="http://vmax.lv/phone/iyem1.png"/></a>
+      <p class="text">Lorem ipsum dolor sit atmet ipsum dolor sit atmet ipsum dolor sit atmet ipsum dolor sit atmet ipsum dolor sit atmet</p>
+  </li>
+</ul>
+</div>
+  
+</div>
