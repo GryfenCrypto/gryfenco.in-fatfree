@@ -1,0 +1,22 @@
+*.class
+.directory
+target
+# Package Files #
+*.jar
+*.war
+*.ear
+
+#eclipse files
+*.classpath
+*.project
+*.prefs
+hs_err_pid*
+
+#idea
+.idea
+_notes
+*.iml
+.settings
+
+/database.config
+/web.config

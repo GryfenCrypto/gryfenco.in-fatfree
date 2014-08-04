@@ -1,0 +1,121 @@
+<div class="fullwidthbanner-container overlay-fix">
+    <div class="top-overlay"></div>
+    <div class="fullwidthbanner" data-0="background-position:0px 0px;" data-end="background-position:0px 600px;">
+        <div class="col-sm-12 header-area">
+            <div class="center"><h1 class="center"
+                                    style="color: black; background-color: #FFF; font-size: 68px; margin-bottom: 60px;">
+                <em><strong>GryfenCoin: Revenge of The Alts</strong></em></h1></div>
+            <div class="row">
+                <div class="center">
+
+                    <p class="center" style="color: black; font-size: 28px;"><a href="register3.html"
+                                                                                class="top-download btn btn-default btn-lg">GET
+                        STARTED!</a>
+                    </p>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- NEWSLETTER -->
+<div class="row half-offset newsletter-bg">
+    <section id="newsletter" class="overlay-fix">
+        <h3 class="center"><strong>GRYFENCOIN WAITING LIST</strong></h3>
+
+        <div class="col-sm-8 col-sm-offset-4 center">
+            <div class="row pop">
+
+                <form class="form-inline" action="<?=$_SERVER['PHP_SELF']; ?>" role="form" id="signup">
+                    <div class="col-lg-4 col-md-5 col-sm-7 clearfix">
+                        <div class="form-group desk-pull-left">
+                            <label class="sr-only" for="NewsletterEmail">Email address</label>
+                            <input type="email" size="60" class="form-control" id="NewsletterEmail"
+                                   placeholder="Enter email">
+										<span id="response">
+											<? require_once('ui/mailchimp/inc/store-address.php'); if($_GET['submit']){ echo storeAddress(); } ?>
+										</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-5 col-sm-7 clearfix">
+                        <div class="form-group">
+                            <button type="submit" class="desk-pull-left btn btn-default btn-sm">NOTIFY ME</button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- USE -->
+<div class="row no-offset image-bg image2">
+    <section id="use" class="appear overlay-fix">
+        <div class="overlay"></div>
+        <div class="row faces no-offset">
+            <h2 class="center">WHY <em>SHOULD</em> YOU USE <span class="colored"><strong> GRYFENCOIN</strong></span> ?
+            </h2>
+
+            <br><br>
+
+            <div class="col-sm-8 col-sm-offset-2">
+                <div class="col-sm-3 holder animate animate_afc">
+                    <div class="center">
+                        <div class="toggle-profile">
+
+                        </div>
+                        <h4>MINE YOUR OWN COINS</h4>
+                        <span class="title">GET SOME</span>
+
+                        <div class="line-wrap center">
+                            <div class="big-line center"><span></span></div>
+                        </div>
+                        <p>Mine in the QT on your PC, or Mine inside the browser in our multipool.  No Mining Factories, No massive processing - distributed computing power.</p>
+                    </div>
+                </div>
+                <div class="col-sm-3 holder animate animate_afc">
+                    <div class="center">
+                        <div class="toggle-profile"></div>
+                        <h4>START TRADING GRYFENCOIN</h4>
+                        <span class="title">IT'S ON FIRE</span>
+
+                        <div class="line-wrap">
+                            <div class="big-line center"><span></span></div>
+                        </div>
+                        <p>Always wanted to get into currency trading?  Well you can trade crypto<em>(property not currency)</em> for other crypto and try to come out on top.</p>
+                    </div>
+                </div>
+                <div class="col-sm-3 holder animate animate_afc">
+                    <div class="center">
+                        <div class="toggle-profile"></div>
+                        <h4>BADASS INTEREST %</h4>
+                        <span class="title">TIME <em>IN</em> THE MARKET</span>
+
+                        <div class="line-wrap">
+                            <div class="big-line center"><span></span></div>
+                        </div>
+                        <p>Any coins held for 7 days receive a variable 0.2-0.5% monthly interest rate, plus you receive super-faucet funds(global interest on mining)</p>
+                    </div>
+                </div>
+                <div class="col-sm-3 holder animate animate_afc">
+                    <div class="center">
+                        <div class="toggle-profile"></div>
+                        <h4>GET LUCKY</h4>
+                        <span class="title">TAKE A RISK</span>
+
+                        <div class="line-wrap">
+                            <div class="big-line center"><span></span></div>
+                        </div>
+                        <p>Imagine if you had bought just ten(10) dollars worth of Bitcoins in the beginning?  You'd be a millionaire today. Take a chance.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="center"><a href="register3.html" class="top-download btn btn-default btn-lg">GET STARTED!</a></div>
+        </div>
+    </section>
+</div>
+
+

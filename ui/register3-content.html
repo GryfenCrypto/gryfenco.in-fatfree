@@ -1,0 +1,65 @@
+<div class="fullpage-cover overlay-fix">
+    <div class="top-overlay"></div>
+    <div class="container" >
+
+            <div class="row">
+                <div class="col-lg-7 col-lg-offset-3">
+                    <div class="row form form-register">
+                        <div class="form-group">
+                            <h2 style="color: #000;" class="big-title" align="center">GryfenCoin: The <em>Next</em>,
+                                <em><strong>Next</strong></em> Big Thing</h2>
+
+                            <p style="font-size: 18px;">Technical Details & Discussion of the coin are found at
+                                <a href="https://bitcointalk.org/index.php?topic=687216"
+                                   target="_blank">Bitcointalk.org</a></p>
+
+
+                            <div class="center"><p>&nbsp;</p></div>
+                            <p class="center" style="color: #000;">1 Share costs <strong>0.0002BTC</strong>
+                            </p>
+
+                            <div class="center">
+                                We now accept <a
+                                    href="mailto:GryfenCoin@gmail.com?Subject=GryfenCoin%20PreOrder-WF-BankTransfer"
+                                    target="_new">Wells Fargo Bank Transfers</a>
+
+                                <p style="color: #000;">or <em>only</em><strong>$0.12c</strong></p>
+
+                                <p><br>OR buy your shares by depositing in this Bitcoin Acccount: </p>
+
+                                <p style="color: #000;"><strong>1Fy1rwKmDHi87xesDdStBTJS341at7wJNo</strong></p>>
+
+
+                                <p style="color: #FF0000;">AND FOLLOW UP BY EMAILING</p>
+
+                                <p><strong><a href="mailto:GryfenCoin@gmail.com?Subject=GryfenCoin%20PreOrder"
+                                              target="_new">GryfenCoin@gmail.com</a></strong> <br>when the wallet is
+                                    available(on launch) provide us with your GryfenCoin address to receive your coins
+                                </p>
+
+                                <p style="color:black;">Subscribe and stay up to date</p>
+                            </div>
+
+                        </div>
+
+                        <form action="<?=$_SERVER['PHP_SELF']; ?>" role="form" id="signup">
+
+                                <div class="form-group">
+                                    <label class="sr-only" for="NewsletterEmail">Email address</label>
+                                    <input type="email" size="60" class="form-control" id="NewsletterEmail"
+                                           placeholder="Enter email">
+										<span id="response">
+											<? require_once('ui/mailchimp/inc/store-address.php'); if($_GET['submit']){ echo storeAddress(); } ?>
+										</span>
+                                </div>
+
+                            <button type="submit" class="btn btn-secondary btn-lg btn-block">Let me know about GryfenCoin news!</button>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+    </div>
+</div>
+

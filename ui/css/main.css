@@ -479,10 +479,11 @@
    .form-register { background: #fff; padding: 20px 15px; margin-top: 45%;}
    .form-register input.form-control { color: #545758; }
    
-   .form-register ::-webkit-input-placeholder { /* WebKit browsers */ color:#EBEBEB !important; font-family: 'Source Sans Pro', sans-serif;}
-   .form-register :-moz-placeholder { /* Mozilla Firefox 4 to 18 */ color:#EBEBEB !important; font-family: 'Source Sans Pro', sans-serif;}
-   .form-register  ::-moz-placeholder { /* Mozilla Firefox 19+ */ color:#EBEBEB !important; font-family: 'Source Sans Pro', sans-serif; }
-   .form-register  :-ms-input-placeholder { /* Internet Explorer 10+ */ color:#EBEBEB !important; font-family: 'Source Sans Pro', sans-serif;}
+   .form-register ::-webkit-input-placeholder { /* WebKit browsers */ color: #afafaf !important; font-family: 'Source Sans Pro', sans-serif;}
+   .form-register :-moz-placeholder { /* Mozilla Firefox 4 to 18 */ color:#afafaf !important; font-family: 'Source Sans Pro', sans-serif;}
+   .form-register  ::-moz-placeholder { /* Mozilla Firefox 19+ */ color:#afafaf !important; font-family: 'Source Sans Pro', sans-serif; }
+   .form-register  :-ms-input-placeholder { /* Internet Explorer 10+ */ color:#afafaf !important; font-family: 'Source Sans Pro', sans-serif;}
+
 
     .form-register:after { content: ''; display: block; clear: both; }
    .form-register .form-control { border-left: 3px solid #ff5f9b; }
