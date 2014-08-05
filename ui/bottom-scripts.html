@@ -23,12 +23,34 @@
 <!-- OWL CAROUSEL PLUGIN -->
 <script src="ui/js/owl/owl.carousel.min.js"></script>
 
-
 <!-- THEME PLUGINS -->
 <script src="ui/js/plugins.js"></script>
 <script src="ui/js/main.js"></script>
 
+<!-- FLIP CLOCK PLUGIN -->
+<script src="ui/js/flipclock/flipclock.js"></script>
+<script type="text/javascript">
+    var clock;
 
+    $(document).ready(function() {
+
+        // Grab the current date
+        var currentDate = new Date();
+
+        // Set some date in the future. In this case, it's always Jan 1
+        var futureDate  = new Date(2014,08,20);
+
+        // Calculate the difference in seconds between the future and current date
+        var diff = futureDate.getTime() / 1000 - currentDate.getTime() / 1000;
+
+        // Instantiate a coutdown FlipClock
+        clock = $('.clock').FlipClock(diff, {
+            clockFace: 'DailyCounter',
+            countdown: true,
+            showSeconds: false
+        });
+    });
+</script>
 <!-- GOOGLE ANALYTICS -->
 <script>
     (function (i, s, o, g, r, a, m) {

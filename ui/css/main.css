@@ -10,7 +10,13 @@
 *	Orange - #ff7200
 *
 *************************************/
-
+/*==========================================================================
+       COUNTDOWN
+       ========================================================================== */
+.countdown {
+    font-size: 50px;
+    color: #000000;
+}
 /*==========================================================================
   RESETS AND MASTER STYLES 
   ========================================================================== */
@@ -141,7 +147,7 @@
    .header {padding-left: 30px;}
    .top-download.learn {padding:20px 60px; font-weight:600; text-align:center;}
    .header-area {z-index:1;}
-   .header-img  {margin:50px 0px 20px 0px;}
+   .header-img  {margin:0px 0px 20px 0px;}
    .header-txt  {font:300 20pt 'Source Sans Pro', sans-serif; opacity:0.9; margin-bottom:60px; padding-right:10px; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8); color:#fff;}
    .header-video-link {position:absolute; top:75%; left:45%; display:block; width:95px; height:95px; }
    .lg-icon {line-height: 90px; border-width:6px; opacity:0.9; -webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%;}
@@ -946,4 +952,7 @@
 	.review .source {margin: 5px 0px 0px 0px; position:relative;}
 	.review .line-wrap {padding: 25px 0px 25px 0px;}
 	.review:hover .line-wrap {padding-top:25px !important;}
+
+
+
 }

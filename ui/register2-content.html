@@ -61,20 +61,7 @@
 
                         </div>
 
-                        <form action="<?=$_SERVER['PHP_SELF']; ?>" role="form" id="signup">
-
-                                <div class="form-group">
-                                    <label class="sr-only" for="NewsletterEmail">Email address</label>
-                                    <input type="email" size="60" class="form-control" id="NewsletterEmail"
-                                           placeholder="Enter email">
-										<span id="response">
-											<? require_once('ui/mailchimp/inc/store-address.php'); if($_GET['submit']){ echo storeAddress(); } ?>
-										</span>
-                                </div>
-
-                            <button type="submit" class="btn btn-secondary btn-lg btn-block">Let me know about GryfenCoin news!</button>
-
-                        </form>
+                        <?php require_once('controller/functions.php'); echo renderWaitingListForm(View::instance()); ?>
                     </div>
                 </div>
             </div>
