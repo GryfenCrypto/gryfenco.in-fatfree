@@ -15,4 +15,4 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule .* index.php [L,QSA]
 RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization},L]
-RewriteRule ^img.*$ ^ui/img/ [R=301,L]
+#RewriteRule ^img.*$ ^ui/img/ [R=301,L]

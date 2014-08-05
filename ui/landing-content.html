@@ -680,14 +680,14 @@
         <div class="col-sm-8 col-sm-offset-4 center">
             <div class="row pop">
 
-                <form class="form-inline" action="<?=$_SERVER['PHP_SELF']; ?>" role="form" id="signup">
+                <form class="form-inline" action="ui/mailchimp/inc/store-address.php" role="form" id="signup">
                     <div class="col-lg-4 col-md-5 col-sm-7 clearfix">
                         <div class="form-group desk-pull-left">
                             <label class="sr-only" for="NewsletterEmail">Email address</label>
                             <input type="email" size="60" class="form-control" id="NewsletterEmail"
                                    placeholder="Enter email">
 										<span id="response">
-											<? require_once('ui/mailchimp/inc/store-address.php'); if($_GET['submit']){ echo storeAddress(); } ?>
+
 										</span>
                         </div>
                     </div>
