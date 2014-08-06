@@ -116,6 +116,24 @@ $f3->route('GET /client-page',
         $page->render();
     }
 );
+$f3->route('GET /@section',
+    function($f3,$params) {
+        $footerSections = array("privacy","terms","copyright","antispam","legal");
+        $section=$params['section'];
+        if(in_array($section,$footerSections))
+        {
+            $f3->set('btnLabel','Subscribe and stay up to date');
+            $page = new LandingPage($f3,View::instance());
+            $page->setContent("ui/".$section.".html");
+            $page->render();
+        }
+        else
+        {
+            $f3->reroute('/');
+        }
+    }
+);
+
 
 
 $f3->run();
