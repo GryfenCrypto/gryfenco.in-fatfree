@@ -17,6 +17,12 @@
     font-size: 50px;
     color: #000000;
 }
+
+.white-bg {background-color: #ffffff !important;}
+
+.first-section {
+    margin-top:150px;
+}
 /*==========================================================================
   RESETS AND MASTER STYLES 
   ========================================================================== */

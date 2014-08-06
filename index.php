@@ -107,5 +107,15 @@ $f3->route('GET /gryfencoin-awesome-users',
 );
 
 
+$f3->route('GET /client-page',
+    function($f3) {
+
+        $f3->set('btnLabel','Subscribe and stay up to date');
+        $page = new LandingPage($f3,View::instance());
+        $page->setContent("ui/client-page.html");
+        $page->render();
+    }
+);
+
 
 $f3->run();
