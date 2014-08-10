@@ -116,6 +116,17 @@ $f3->route('GET /client-page',
         $page->render();
     }
 );
+
+$f3->route('GET /specs',
+    function($f3) {
+
+        $f3->set('btnLabel','Subscribe and stay up to date');
+        $page = new LandingPage($f3,View::instance());
+        $page->setContent("ui/specs-content.html");
+        $page->render();
+    }
+);
+
 $f3->route('GET /@section',
     function($f3,$params) {
         $footerSections = array("privacy","terms","copyright","antispam","legal");
