@@ -455,6 +455,7 @@
 	.btn {color:#fff; font-weight:700; border:0; background:transparent;}
 	
 	.btn-default {background:transparent; border:1px solid #fff;}
+    .btn-default-blue {background:#39b3d7; border:1px solid #fff;}
 	.btn-primary {background:transparent; border:1px solid #ff5f9b;}
 	.btn-secondary {background: #ff5f9b;color: #fff;}
 	.btn-secondary:active {background: #FF81B0;color: #fff;}

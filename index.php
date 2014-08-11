@@ -127,6 +127,16 @@ $f3->route('GET /specs',
     }
 );
 
+$f3->route('GET /learn-more',
+    function($f3) {
+
+        $f3->set('btnLabel','Subscribe and stay up to date');
+        $page = new LandingPage($f3,View::instance());
+        $page->setContent("ui/learn-more.html");
+        $page->render();
+    }
+);
+
 $f3->route('GET /@section',
     function($f3,$params) {
         $footerSections = array("privacy","terms","copyright","antispam","legal");
