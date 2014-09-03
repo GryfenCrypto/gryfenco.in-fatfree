@@ -17,125 +17,164 @@ $f3->route('GET /',
 	}
 );
 
-$f3->route('GET /register',
+$f3->route('GET /faucet',
     function($f3) {
-        $f3->set('btnLabel','Let me know about GryfenCoin news!');
+//        $f3->set('btnLabel','Let me know about GryfenCoin news!');
         $page = new RegisterPage($f3,View::instance());
-        $page->setContent("ui/register2-content.html");
+        $page->setContent("ui/faucet-content.html");
         $page->render();
     }
 );
-
-$f3->route('GET /gryfencoin-proof-of-work-mining',
+$f3->route('GET /pricing-l4',
     function($f3) {
 
-        $f3->set('btnLabel','Add me to the wait list');
+
         $page = new LandingPage($f3,View::instance());
-        $page->setContent("ui/gryfencoin-proof-of-work-mining.html");
+        $page->setContent("ui/pricing_l4.html");
         $page->render();
     }
 );
-
-$f3->route('GET /gryfencoin-proof-of-stake-minting',
+$f3->route('GET /pricing-t4',
     function($f3) {
 
-        $f3->set('btnLabel','Add me to the wait list');
+
         $page = new LandingPage($f3,View::instance());
-        $page->setContent("ui/gryfencoin-proof-of-stake-minting.html");
+        $page->setContent("ui/pricing_t4.html");
         $page->render();
     }
 );
 
-$f3->route('GET /gryfencoin-super-faucet-minting',
+$f3->route('GET /pricing',
     function($f3) {
 
-        $f3->set('btnLabel','Add me to the wait list');
+
         $page = new LandingPage($f3,View::instance());
-        $page->setContent("ui/gryfencoin-super-faucet-minting.html");
-        $page->render();
-    }
-);
-
-$f3->route('GET /gryfencoin-stake-share-futures',
-    function($f3) {
-
-        $f3->set('btnLabel','Add me to the wait list');
-        $page = new LandingPage($f3,View::instance());
-        $page->setContent("ui/gryfencoin-stake-share-futures.html");
-        $page->render();
-    }
-);
-
-$f3->route('GET /gryfen-co-cryptocurrency-options-market-and-exchange',
-    function($f3) {
-
-        $f3->set('btnLabel','Add me to the wait list');
-        $page = new LandingPage($f3,View::instance());
-        $page->setContent("ui/gryfen-co-cryptocurrency-options-market-and-exchange.html");
-        $page->render();
-    }
-);
-
-$f3->route('GET /gryfen-options-market-cloud-multipool',
-    function($f3) {
-
-        $f3->set('btnLabel','Add me to the wait list');
-        $page = new LandingPage($f3,View::instance());
-        $page->setContent("ui/gryfen-options-market-cloud-multipool.html");
-        $page->render();
-    }
-);
-
-$f3->route('GET /gryfen-business-and-projects',
-    function($f3) {
-
-        $f3->set('btnLabel','Add me to the wait list');
-        $page = new LandingPage($f3,View::instance());
-        $page->setContent("ui/gryfen-business-and-projects.html");
-        $page->render();
-    }
-);
-
-$f3->route('GET /gryfencoin-awesome-users',
-    function($f3) {
-
-        $f3->set('btnLabel','Add me to the wait list');
-        $page = new LandingPage($f3,View::instance());
-        $page->setContent("ui/gryfencoin-awesome-users.html");
+        $page->setContent("ui/pricing.html");
         $page->render();
     }
 );
 
 
-$f3->route('GET /client-page',
-    function($f3) {
 
-        $f3->set('btnLabel','Subscribe and stay up to date');
-        $page = new LandingPage($f3,View::instance());
-        $page->setContent("ui/client-page.html");
-        $page->render();
-    }
-);
+//$f3->route('GET /register',
+//    function($f3) {
+//        $f3->set('btnLabel','Let me know about GryfenCoin news!');
+//        $page = new RegisterPage($f3,View::instance());
+//        $page->setContent("ui/register2-content.html");
+//        $page->render();
+//    }
+//);
 
-$f3->route('GET /specs',
-    function($f3) {
-
-        $f3->set('btnLabel','Subscribe and stay up to date');
-        $page = new LandingPage($f3,View::instance());
-        $page->setContent("ui/specs-content.html");
-        $page->render();
-    }
-);
-
-$f3->route('GET /learn-more',
-    function($f3) {
-
-        $f3->set('btnLabel','Subscribe and stay up to date');
-        $page = new LandingPage($f3,View::instance());
-        $page->setContent("ui/learn-more.html");
-        $page->render();
-    }
-);
+//$f3->route('GET /gryfencoin-proof-of-work-mining',
+//    function($f3) {
+//
+//        $f3->set('btnLabel','Add me to the wait list');
+//        $page = new LandingPage($f3,View::instance());
+//        $page->setContent("ui/gryfencoin-proof-of-work-mining.html");
+//        $page->render();
+//    }
+//);
+//
+//$f3->route('GET /gryfencoin-proof-of-stake-minting',
+//    function($f3) {
+//
+//        $f3->set('btnLabel','Add me to the wait list');
+//        $page = new LandingPage($f3,View::instance());
+//        $page->setContent("ui/gryfencoin-proof-of-stake-minting.html");
+//        $page->render();
+//    }
+//);
+//
+//$f3->route('GET /gryfencoin-super-faucet-minting',
+//    function($f3) {
+//
+//        $f3->set('btnLabel','Add me to the wait list');
+//        $page = new LandingPage($f3,View::instance());
+//        $page->setContent("ui/gryfencoin-super-faucet-minting.html");
+//        $page->render();
+//    }
+//);
+//
+//$f3->route('GET /gryfencoin-stake-share-futures',
+//    function($f3) {
+//
+//        $f3->set('btnLabel','Add me to the wait list');
+//        $page = new LandingPage($f3,View::instance());
+//        $page->setContent("ui/gryfencoin-stake-share-futures.html");
+//        $page->render();
+//    }
+//);
+//
+//$f3->route('GET /gryfen-co-cryptocurrency-options-market-and-exchange',
+//    function($f3) {
+//
+//        $f3->set('btnLabel','Add me to the wait list');
+//        $page = new LandingPage($f3,View::instance());
+//        $page->setContent("ui/gryfen-co-cryptocurrency-options-market-and-exchange.html");
+//        $page->render();
+//    }
+//);
+//
+//$f3->route('GET /gryfen-options-market-cloud-multipool',
+//    function($f3) {
+//
+//        $f3->set('btnLabel','Add me to the wait list');
+//        $page = new LandingPage($f3,View::instance());
+//        $page->setContent("ui/gryfen-options-market-cloud-multipool.html");
+//        $page->render();
+//    }
+//);
+//
+//$f3->route('GET /gryfen-business-and-projects',
+//    function($f3) {
+//
+//        $f3->set('btnLabel','Add me to the wait list');
+//        $page = new LandingPage($f3,View::instance());
+//        $page->setContent("ui/gryfen-business-and-projects.html");
+//        $page->render();
+//    }
+//);
+//
+//$f3->route('GET /gryfencoin-awesome-users',
+//    function($f3) {
+//
+//        $f3->set('btnLabel','Add me to the wait list');
+//        $page = new LandingPage($f3,View::instance());
+//        $page->setContent("ui/gryfencoin-awesome-users.html");
+//        $page->render();
+//    }
+//);
+//
+//
+//$f3->route('GET /client-page',
+//    function($f3) {
+//
+//        $f3->set('btnLabel','Subscribe and stay up to date');
+//        $page = new LandingPage($f3,View::instance());
+//        $page->setContent("ui/client-page.html");
+//        $page->render();
+//    }
+//);
+//
+//$f3->route('GET /specs',
+//    function($f3) {
+//
+//        $f3->set('btnLabel','Subscribe and stay up to date');
+//        $page = new LandingPage($f3,View::instance());
+//        $page->setContent("ui/specs-content.html");
+//        $page->render();
+//    }
+//);
+//
+//$f3->route('GET /learn-more',
+//    function($f3) {
+//
+//        $f3->set('btnLabel','Subscribe and stay up to date');
+//        $page = new LandingPage($f3,View::instance());
+//        $page->setContent("ui/learn-more.html");
+//        $page->render();
+//    }
+//);
 
 $f3->route('GET /@section',
     function($f3,$params) {

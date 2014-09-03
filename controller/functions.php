@@ -11,3 +11,9 @@ function renderWaitingListForm($view)
 
     return $view->render('ui/add-wait-list-form.html');
 }
+
+function renderFaucetForm($view)
+{
+
+    return $view->render('ui/faucet-form.html');
+}
