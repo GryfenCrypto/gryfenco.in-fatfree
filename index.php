@@ -1,58 +1,66 @@
 <?php
-require_once('controller/template.php');
+//require_once('controller/template.php');
 $f3= require('lib/base.php');
+
 
 
 $f3->set('DEBUG',1);
 if ((float)PCRE_VERSION<7.9)
 	trigger_error('PCRE version is out of date');
 
-$f3->config('config.ini');
+// Initialize GRYF
+$f3->config('app/config.ini');
 
-$f3->route('GET /',
-	function($f3) {
+// Define routes
+$f3->config('app/routes.ini');
 
-        $page = new LandingPage($f3,View::instance());
-        $page->render();
-	}
-);
+// Execute application
+$f3->run();
 
-$f3->route('GET /faucet',
-    function($f3) {
-//        $f3->set('btnLabel','Let me know about GryfenCoin news!');
-        $page = new RegisterPage($f3,View::instance());
-        $page->setContent("ui/faucet-content.html");
-        $page->render();
-    }
-);
-$f3->route('GET /pricing-l4',
-    function($f3) {
-
-
-        $page = new LandingPage($f3,View::instance());
-        $page->setContent("ui/pricing_l4.html");
-        $page->render();
-    }
-);
-$f3->route('GET /pricing-t4',
-    function($f3) {
-
-
-        $page = new LandingPage($f3,View::instance());
-        $page->setContent("ui/pricing_t4.html");
-        $page->render();
-    }
-);
-
-$f3->route('GET /pricing',
-    function($f3) {
-
-
-        $page = new LandingPage($f3,View::instance());
-        $page->setContent("ui/pricing.html");
-        $page->render();
-    }
-);
+//$f3->route('GET /',
+//	function($f3) {
+//
+//        $page = new LandingPage($f3,View::instance());
+//        $page->render();
+//	}
+//);
+//
+//$f3->route('GET /faucet',
+//    function($f3) {
+////        $f3->set('btnLabel','Let me know about GryfenCoin news!');
+//        $page = new RegisterPage($f3,View::instance());
+//        $page->setContent("ui/faucet-content.html");
+//        $page->render();
+//    }
+//);
+//$f3->route('GET /pricing-l4',
+//    function($f3) {
+//
+//
+//        $page = new LandingPage($f3,View::instance());
+//        $page->setContent("ui/pricing_l4.html");
+//        $page->render();
+//    }
+//);
+//$f3->route('GET /pricing-t4',
+//    function($f3) {
+//
+//
+//        $page = new LandingPage($f3,View::instance());
+//        $page->setContent("ui/pricing_t4.html");
+//        $page->render();
+//    }
+//);
+//
+//$f3->route('GET /pricing',
+//    function($f3) {
+//
+//
+//        $page = new LandingPage($f3,View::instance());
+//        $page->setContent("ui/pricing.html");
+//        $page->render();
+//    }
+//);
 
 
 
@@ -176,24 +184,24 @@ $f3->route('GET /pricing',
 //    }
 //);
 
-$f3->route('GET /@section',
-    function($f3,$params) {
-        $footerSections = array("privacy","terms","copyright","antispam","legal");
-        $section=$params['section'];
-        if(in_array($section,$footerSections))
-        {
-            $f3->set('btnLabel','Subscribe and stay up to date');
-            $page = new LandingPage($f3,View::instance());
-            $page->setContent("ui/".$section.".html");
-            $page->render();
-        }
-        else
-        {
-            $f3->reroute('/');
-        }
-    }
-);
-
-
-
-$f3->run();
+//$f3->route('GET /@section',
+//    function($f3,$params) {
+//        $footerSections = array("privacy","terms","copyright","antispam","legal");
+//        $section=$params['section'];
+//        if(in_array($section,$footerSections))
+//        {
+//            $f3->set('btnLabel','Subscribe and stay up to date');
+//            $page = new LandingPage($f3,View::instance());
+//            $page->setContent("ui/".$section.".html");
+//            $page->render();
+//        }
+//        else
+//        {
+//            $f3->reroute('/');
+//        }
+//    }
+//);
+//
+//
+//
+//$f3->run();
