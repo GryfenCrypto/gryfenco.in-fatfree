@@ -1,16 +1,12 @@
 /*
-Navicat MySQL Data Transfer
 
-Source Server         : gryfencoin_db
-Source Server Version : 50538
-Source Host           : 192.168.1.2:3306
 Source Database       : gryfencoin_db
 
 Target Server Type    : MYSQL
 Target Server Version : 50538
 File Encoding         : 65001
 
-Date: 2014-09-03 22:31:36
+Date: 2014-09-06 18:32:52
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -29,4 +25,22 @@ CREATE TABLE `faucet` (
 
 -- ----------------------------
 -- Records of faucet
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for `sessions`
+-- ----------------------------
+DROP TABLE IF EXISTS `sessions`;
+CREATE TABLE `sessions` (
+  `session_id` varchar(40) NOT NULL DEFAULT '',
+  `data` text,
+  `csrf` text,
+  `ip` varchar(40) DEFAULT NULL,
+  `agent` varchar(255) DEFAULT NULL,
+  `stamp` int(11) DEFAULT NULL,
+  PRIMARY KEY (`session_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+-- Records of sessions
 -- ----------------------------
