@@ -63,7 +63,7 @@ class GRYF extends Controller
 
         if($this->ipIsAlreadyRegistered($this->getIp(),$gaddress))
         {
-            echo "You already received your coins! ".$this->getIp(); return;
+            echo "You already received your coins! "; return;
         }
 
         $address = $f3->get('faucet_email');
