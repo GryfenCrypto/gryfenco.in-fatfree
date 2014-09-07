@@ -18,7 +18,7 @@ class LandingPage extends Controller {
     //! HTTP route post-processor
     function afterroute() {
         // Render HTML layout
-        echo Template::instance()->render('landing-layout.html');
+
     }
 
 
@@ -35,11 +35,13 @@ class LandingPage extends Controller {
     function home($f3)
     {
         $this->renderLandingPage($f3,"landing-content.html");
+        echo Template::instance()->render('landing-layout.html');
 
     }
     function faucet($f3)
     {
         $this->renderLandingPage($f3,"faucet.html");
+        echo Template::instance()->render('no-footer-layout.html');
 
     }
 
@@ -47,17 +49,22 @@ class LandingPage extends Controller {
 
     function sections($f3,$params)
     {
+
+
         $footerSections = array("privacy","terms","copyright","antispam","legal");
         $section=$params['section'];
         if(in_array($section,$footerSections))
         {
             $this->renderLandingPage($f3,$section.".html");
+            echo Template::instance()->render('landing-layout.html');
         }
         else
         {
             $f3->error('404');
         }
     }
+
+
 
 
 

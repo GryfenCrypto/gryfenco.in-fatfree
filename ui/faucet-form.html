@@ -1,14 +1,29 @@
-<form action="ui/faucet/process-address.php" role="form" id="faucet-form">
+<!--<form action="ui/faucet/process-address.php" role="form" id="faucet-form">-->
+
+    <!--<div class="form-group">-->
+        <!--<label class="sr-only" for="gryfen-address">Email address</label>-->
+        <!--<input type="text" size="60" class="form-control" id="gryfen-address"-->
+               <!--placeholder="Enter A valid GryfenCoin address">-->
+		<!--<span id="response"></span>-->
+    <!--</div>-->
+
+    <!--<button type="submit" class="btn btn-primary btn-lg btn-block">-->
+            <!--Send me GryfenCoins!-->
+    <!--</button>-->
+
+<!--</form>-->
+
+<form action="{{ @BASE }}/submitfaucet"  method="post" id="faucet-form">
 
     <div class="form-group">
         <label class="sr-only" for="gryfen-address">Email address</label>
         <input type="text" size="60" class="form-control" id="gryfen-address"
                placeholder="Enter A valid GryfenCoin address">
-		<span id="response"></span>
+        <span id="response"></span>
     </div>
 
     <button type="submit" class="btn btn-primary btn-lg btn-block">
-            Send me GryfenCoins!
+        Send me GryfenCoins!
     </button>
 
 </form>

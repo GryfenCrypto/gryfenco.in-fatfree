@@ -18,5 +18,6 @@ _notes
 *.iml
 .settings
 
-/database.config
-/web.config
+tmp
+download/*
+
