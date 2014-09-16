@@ -45,6 +45,24 @@ class LandingPage extends Controller {
 
     }
 
+    function buySuccess($f3)
+    {
+
+
+        $tx_token = $f3->get("tx");
+        $f3->set('TX_ID',$tx_token);
+        $this->renderLandingPage($f3,"buy-success.html");
+        echo Template::instance()->render('landing-layout.html');
+
+    }
+
+    function buyCancelled($f3)
+    {
+        $this->renderLandingPage($f3,"buy-cancel.html");
+        echo Template::instance()->render('landing-layout.html');
+
+    }
+
 
 
     function sections($f3,$params)

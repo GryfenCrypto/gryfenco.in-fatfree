@@ -23,6 +23,7 @@ CREATE TABLE `faucet` (
   UNIQUE KEY `ip_idx` (`user_ip`(255)) USING BTREE
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
+ALTER TABLE `faucet` ADD UNIQUE `ip_gaddr_index`(`user_ip`,`gaddress`);
 -- ----------------------------
 -- Records of faucet
 -- ----------------------------

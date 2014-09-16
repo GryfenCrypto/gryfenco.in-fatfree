@@ -26,12 +26,18 @@ class GRYF extends Controller
 
         $faucet= new DB\SQL\Mapper($this->db,'faucet');
         $faucet->load(array('user_ip=?',$ip));
-        if($faucet->user_ip==null) // add the new ip and address
+        if($faucet->user_ip==null)
         {
-            $faucet->user_ip=$ip;
-            $faucet->gaddress=$gaddress;
-            $faucet->save();
-            return false;
+
+
+            $faucet->load(array('gaddress=?',$gaddress));
+            if($faucet->gaddress==null) // add the new ip and address
+            {
+                $faucet->user_ip=$ip;
+                $faucet->gaddress=$gaddress;
+                $faucet->save();
+                return false;
+            }
         }
         return true;
     }
@@ -98,6 +104,11 @@ class GRYF extends Controller
 
 
 
+    }
+
+    function confirmBuy($f3)
+    {
+        echo 'Confirm buy';
     }
 
 } 

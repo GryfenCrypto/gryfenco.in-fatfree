@@ -1,0 +1,40 @@
+
+    <!-- PRICING -->
+    <div class="row">
+        <br><br><br><br>
+    </div>
+    <!-- SHARES PRICING -->
+    <div class="row half-offset light-colored-green">
+
+
+
+            <div class="col-sm-9 col-sm-offset-2 center">
+               SUCCESS!
+                <form action="{{ @BASE }}/confirm-buy"  method="post" id="confirm-form">
+
+                    <div class="form-group">
+                        <label class="sr-only" for="email-address">Email address</label>
+                        <input type="text" size="60" class="form-control" id="email-address"
+                               placeholder="Enter your email address">
+
+                        <label class="sr-only" for="gryfen-address">GryfenCoin address</label>
+                        <input type="text" size="60" class="form-control" id="gryfen-address"
+                               placeholder="Enter A valid GryfenCoin address">
+                        <input  name="tx-id" value="{{ @TX_ID }}">
+                        <input  name="tx-token" value="jvbugIQAsyvtZC9karpMQ80rvNrnXB6xtL64k4_pRZqQezh8JRbxQX2rZaW">
+
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-lg btn-block">
+                       Confirm Purchase
+                    </button>
+
+                </form>
+
+            </div>
+
+
+
+
+
+    </div>
